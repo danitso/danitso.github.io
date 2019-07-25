@@ -31,15 +31,26 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}">Home</a>
+                    <a class="nav-link" href="{{ site.baseurl }}">
+                        <i class="fas fa-home"></i> Home
+                    </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownProjects" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownTerraform" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-magic"></i> Terraform
+                    </a>
 
-                    <div class="dropdown-menu" aria-labelledby="dropdownProjects">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownTerraform">
+                        {% for repo in site.github.public_repositories %}
+                            {% assign parts = repo.name | split: "-" %}
+                            {% if parts.size > 2 %}
+                                {% if parts[0] == "terraform" %}
+                                    {% if parts[1] == "provider" %}
+                                        <a class="dropdown-item" href="{{ site.github.owner_url }}/{{ repo.name }}" target="_blank">{{ repo.description }}</a>
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </li>
             </ul>
