@@ -10,14 +10,6 @@
             <span class="danitso-copyright-name">{{ site.github.owner_name }}</span>
         </span>
 
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-info-circle"></i> About
-                </a>
-            </li>
-        </ul>
-
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 {% assign parts = site.email | split: "@" %}
@@ -27,6 +19,12 @@
                     <script>
                         document.write(''.concat('{{ parts[0] }}','<i class="fas fa-at fa-xs"></i>','{{ domain[0] }}.','{{ domain[1] }}'));
                     </script>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-info-circle"></i> About
                 </a>
             </li>
         </ul>
