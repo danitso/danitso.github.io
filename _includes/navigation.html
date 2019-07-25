@@ -47,7 +47,7 @@
                             {% assign parts = repo.name | split: "-" %}
                             {% if parts.size > 2 and parts[0] == "docker" and parts[1] == "image" %}
                                 {% assign foundMatch = 1 %}
-                                <a class="dropdown-item" href="{{ site.github.owner_url }}/{{ repo.name }}" target="_blank">{{ repo.description }}</a>
+                                <a class="dropdown-item" href="{{ repo.html_url }}" target="_blank">{{ repo.description }}</a>
                             {% endif %}
                         {% endfor %}
                         {% if foundMatch == 0 %}
@@ -67,7 +67,7 @@
                             {% assign parts = repo.name | split: "-" %}
                             {% if parts.size > 2 and parts[0] == "terraform" and parts[1] == "provider" %}
                                 {% assign foundMatch = 1 %}
-                                <a class="dropdown-item" href="{{ site.github.owner_url }}/{{ repo.name }}" target="_blank">{{ repo.description }}</a>
+                                <a class="dropdown-item" href="{{ repo.html_url }}" target="_blank">{{ repo.description }}</a>
                             {% endif %}
                         {% endfor %}
                         {% if foundMatch == 0 %}
@@ -87,7 +87,7 @@
                             {% assign parts = repo.name | split: "-" %}
                             {% if parts.size > 2 and parts[0] == "cli" and parts[1] == "tool" %}
                                 {% assign foundMatch = 1 %}
-                                <a class="dropdown-item" href="{{ site.github.owner_url }}/{{ repo.name }}" target="_blank">{{ repo.description }}</a>
+                                <a class="dropdown-item" href="{{ repo.html_url }}" target="_blank">{{ repo.description }}</a>
                             {% endif %}
                         {% endfor %}
                         {% if foundMatch == 0 %}
