@@ -1,0 +1,48 @@
+<div class="fixed-top danitso-header">
+    <nav class="navbar navbar-expand-md navbar-dark static-top bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="/assets/images/danitso.png" width="30" height="30" alt="">
+            {{ site.title }}
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeaderCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarHeaderCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item d-none d-md-block">
+                    <a class="btn btn-secondary" href="{{ site.github.owner_url }}" target="_blank" title="Repositories">
+                        <i class="fab fa-github"></i> Repositories
+                    </a>
+                </li>
+                <li class="nav-item d-md-none">
+                    <a class="nav-link" href="{{ site.github.owner_url }}" target="_blank">Repositories</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar static-top navbar-expand-md navbar-light danitso-nav-content">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownProjects" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownProjects">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

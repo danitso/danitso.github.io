@@ -1,0 +1,16 @@
+# Site settings
+title: Danitso
+email: info@danitso.com
+author:
+description:
+url:
+
+# Build settings
+permalink: :title/
+plugins:
+  - "jekyll-github-metadata"
+sass:
+  sass_dir: ./_scss
+
+# Repository settings
+repository: danitso/danitso.github.io
