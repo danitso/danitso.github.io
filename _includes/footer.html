@@ -12,8 +12,13 @@
 
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="mailto:{{ site.email }}">
-                    <i class="far fa-envelope"></i> {{ site.email }}
+                {% assign parts = site.email | split: "@" %}
+                {% assign domain = parts[1] | split: "." %}
+                <a class="nav-link" href="javascript:window.location.href=''.concat(atob('bWFp'),atob('bHRv'),':','{{ parts[0] }}',String.fromCharCode((761.5+6.5)/12),'{{ domain[0] }}.','{{ domain[1] }}');">
+                    <i class="far fa-envelope"></i>
+                    <script>
+                        document.write(''.concat('{{ parts[0] }}','<i class="fas fa-at fa-xs"></i>','{{ domain[0] }}.','{{ domain[1] }}'));
+                    </script>
                 </a>
             </li>
         </ul>
