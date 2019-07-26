@@ -3,11 +3,14 @@
     min-height: 480px;
     position: relative;
 
-    background-image: url('../images/showcase-default.png');
     background-repeat: no-repeat;
     background-size: cover;
 
     border-bottom: 5px solid #ffffff;
+}
+
+.danitso-showcase-container.danitso-showcase-container-default {
+    background-image: url('../images/showcase-default.jpg');
 }
 
 .danitso-showcase-overlay {
